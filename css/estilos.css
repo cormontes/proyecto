@@ -1,0 +1,23 @@
+.conte{
+	width: 90%;
+	margin: auto;
+}
+.contenido{
+	margin: auto;
+	padding: 10px;
+}
+.tabla{
+	margin: auto;
+}
+.tabla table{
+	width: 100%
+}
+.registro{
+	margin: auto;
+}
+.form-registro h2{
+	text-align: center;
+}
+.form-group{
+	margin: auto;
+}
