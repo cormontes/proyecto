@@ -24,10 +24,10 @@
 			</div>
 	
 			<div class="row">
-				<div class="col-md-4 tabla">
+				<div class="table-responsive">
 					<?php if ($num > 0){ ?>
 						<?php foreach($statement as $mostrar): ?>
-							<table id='tabla' class="table table-dark table-hover col-md-4">
+							<table id='tabla' class="table table-hover">
 								<thead>
 									<tr>
 										<th>Id</th>

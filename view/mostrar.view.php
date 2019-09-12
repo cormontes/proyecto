@@ -2,12 +2,27 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<!---  Refrescar pagina html en 10 segundos   --->
+	<!----- 	
+	<meta http-equiv="Refresh" content="10;url=mostrar.php">
+-->
 	<title>Mostrar datos</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<!----  Refrescar pagina con JQuery 10 segundos   --->
+  	<script>
+  		$(document).ready(function(){
+  			setTimeout(refrescar,20000);
+  		});
+
+  		function refrescar(){
+  			location.reload();
+  		}
+  	</script>
+ 
 </head>
 <body>
 	<div class="container">
@@ -33,8 +48,7 @@
 								<td><?php echo $consulta->nombre; ?></td>
 								<td><?php echo $consulta->correo; ?></td>
 								<td><?php echo $consulta->estado; ?></td>
-								<td><a href="#"><button class="btn btn-default"><i class="fas fa-pencil-alt"></i> Modificar</button></a></td>
-								<td><a href="#"><button class="btn btn-success">Eliminar</button></a></td>
+								<td><a class="btn btn-default glyphicon glyphicon-pencil" href="editar.php?codigo=<?php echo $consulta->codigo;?>"></a></td>
 							</tr>
 						</tbody>
 					<?php endforeach ?>

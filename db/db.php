@@ -6,7 +6,7 @@
  	private $host 	=	'localhost';
  	private $dbname	=	'package';
  	private $dbuser	=	'root';
- 	private $pass	=	'';
+ 	private $dbpass	=	'';
 
 
  	public function Conexion(){

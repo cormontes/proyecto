@@ -22,6 +22,7 @@
 			$error.= 'Por favor ingrese un Apellido <br>';
 		}
 
+
 		if(!empty($correo)){
 			$correo = filter_var($correo,FILTER_SANITIZE_EMAIL);
 
@@ -72,6 +73,9 @@
 		 	$asunto = 'Codigo de Rastreo';
 		 	$mensaje = $codigo;
 		 	mail($correo,$asunto,$mensaje);
+
+		 	/* Evita que al actualizar la pagina guarde denuevo los registros*/
+		 	header('Location: registro.php');
 		}
 		 
 
