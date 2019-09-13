@@ -3,8 +3,6 @@
 	$num = '';
 
 
-
-
 		try {
 			$conn = new PDO('mysql:host=localhost;dbname=package','root','');
 		} catch (PDOException $e) {

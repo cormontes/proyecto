@@ -2,10 +2,7 @@
 	
 
 	$consulta = $_GET['codigo'];
-	
-	if(isset($_POST['submit'])){
 
-	}
 	try {
 		$conn = new PDO('mysql:host=localhost;dbname=package','root','');
 	} catch (PDOException $e) {
@@ -13,6 +10,9 @@
 		die();
 	}
 	
+	$statement = $conn->prepare('select * from mov_paq where codigo = :consulta');
+	$statement->execute(array(':consulta' => $consulta));
+	$editar = $statement->fetch(PDO::FETCH_ASSOC);
 
 
 	require 'view/editar.view.php';

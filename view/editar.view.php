@@ -12,16 +12,25 @@
 <body>
 	<div class="container">
 		<div class="col-md-8">
-			<form action="">
+			<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 				<h2>Editar Registros</h2>
 				<div class="form-group">
-					<label for="">Codigo</label>
-					<input type="text" name="codigo" id="codigo" width="20px">
+					<label for="">Codigo: </label>
+					<input type="text" name="codigo" id="codigo" value="<?php echo $editar['codigo']; ?>">
 				</div>
 				<div class="form-group">
-					<label for="">Nombre</label>
-					<input type="text" name="nombre" id="nombre">
+					<label for="">Nombre: </label>
+					<input type="text" name="nombre" id="nombre" value="<?php echo $editar['nombre']; ?>">
 				</div>
+				<div class="form-group">
+					<label for="">Correo: </label>
+					<input type="text" name="correo" id="correo" value="<?php echo $editar['correo']; ?>">
+				</div>
+				<div class="form-group">
+					<label for="">Estado: </label>
+					<input type="text" name="estado" id="estado" value="<?php echo $editar['estado']; ?>">
+				</div>
+				<button onclick="">Guardar</button><button type="">Atras</button>
 			</form>
 		</div>
 	</div>

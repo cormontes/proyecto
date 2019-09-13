@@ -9,7 +9,7 @@
  	private $dbpass	=	'';
 
 
- 	public function Conexion(){
+ 	public function conexion(){
  		try{
  			$this->conn = new PDO('mysql:host='.$this->host.';dbname'.$this->dbname,$this->dbuser,$this->dbpass);
  			$this->conn->exec('set name utf8');

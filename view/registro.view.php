@@ -6,6 +6,10 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/estilos.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script>
+  		/* No volver a pagina anterior*/
+  		javascript:window.history.forward(1);
+  	</script>
 </head>
 <body>
 	<div class="container">
